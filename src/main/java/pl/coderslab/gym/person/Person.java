@@ -1,9 +1,6 @@
 package pl.coderslab.gym.person;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,6 +8,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 
 @Entity
 @Table(name = "persons")
@@ -25,4 +23,18 @@ public class Person {
     private String name;
     private String password;
     private String role;
+
+    public Person(long id, String email, String name, String role) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.role = role;
+    }
+
+    public Person(String email, String name, String password, String role) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
+        this.role = role;
+    }
 }

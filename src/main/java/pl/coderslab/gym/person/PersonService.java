@@ -1,6 +1,7 @@
 package pl.coderslab.gym.person;
 
 import org.springframework.stereotype.Service;
+import pl.coderslab.BCrypt;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,5 +34,9 @@ public class PersonService {
 
     public void updatePerson(Person person) {
         personRepository.save(person);
+    }
+
+    public String hashPassword(String password) {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 }
