@@ -1,4 +1,4 @@
-package pl.coderslab;
+package pl.coderslab.gym;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
