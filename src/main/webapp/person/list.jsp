@@ -21,36 +21,31 @@
         </tr>
 
         <c:forEach items="${persons}" var="person">
-            <c:set var="personId" value="${person.getId()}"/>
-            <c:set var="personName" value="${person.getName()}"/>
-            <c:set var="personEmail" value="${person.getEmail()}"/>
-            <c:set var="personRole" value="${person.getRole()}"/>
             <tr style="background-color: white">
-                <td>${personId}</td>
-                <td>${personName}</td>
-                <td>${personEmail}</td>
-                <td>${personRole}</td>
+                <td>${person.id}</td>
+                <td>${person.name}</td>
+                <td>${person.email}</td>
+                <td>${person.role}</td>
                 <td>
-                    <form action="/person/show"
-                          method="post" style="display:inline; font-size: 10px;">
-                        <input type="hidden" name="personId" value="${personId}">
-                        <input type="hidden" name="personName" value="${personName}">
-                        <input type="hidden" name="personEmail" value="${personEmail}">
-                        <input type="hidden" name="personRole" value="${personRole}">
-                        <button type="submit" style="background-color: lightgreen; border:none">Pokaż</button>
-                    </form>
-                    <form action="/person/edit.jsp"
-                          method="post" style="display:inline; font-size: 10px;">
-                        <input type="hidden" name="personId" value="${personId}">
-                        <input type="hidden" name="personName" value="${personName}">
-                        <input type="hidden" name="personEmail" value="${personEmail}">
-                        <button type="submit" style="background-color: gold; border:none">Edytuj</button>
-                    </form>
-                    <form action="/person/delete"
-                          method="post" style="display:inline; font-size: 10px;">
-                        <input type="hidden" name="personId" value="${personId}">
-                        <button type="submit" style="background-color: lightcoral; border:none">Usuń</button>
-                    </form>
+
+                    <a href="<c:url value="/person/show/${person.id}"/>">pokaż &nbsp</a>
+<%--                    <form action="/person/show"--%>
+<%--                          method="post" style="display:inline; font-size: 10px;">--%>
+<%--                        <input type="hidden" name="personId" value="${person.id}">--%>
+<%--                        <button type="submit" style="background-color: lightgreen; border:none">Pokaż</button>--%>
+<%--                    </form>--%>
+                    <a href="<c:url value="/person/update/${person.id}"/>">edytuj &nbsp</a>
+<%--                    <form action="/person/update"--%>
+<%--                          method="get" style="display:inline; font-size: 10px;">--%>
+<%--                        <input type="hidden" name="personId" value="${person.id}">--%>
+<%--                        <button type="submit" style="background-color: gold; border:none">Edytuj</button>--%>
+<%--                    </form>--%>
+                    <a href="<c:url value="/person/delete/${person.id}"/>">usuń</a>
+<%--                    <form action="/person/delete"--%>
+<%--                    method="post" style="display:inline; font-size: 10px;">--%>
+<%--                    <input type="hidden" name="personId" value="${person.id}">--%>
+<%--                    <button type="submit" style="background-color: lightcoral; border:none">Usuń</button>--%>
+<%--                    </form>--%>
                 </td>
             </tr>
         </c:forEach>

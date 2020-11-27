@@ -24,13 +24,6 @@ public class Person {
     private String password;
     private String role;
 
-    public Person(long id, String email, String name, String role) {
-        this.id = id;
-        this.email = email;
-        this.name = name;
-        this.role = role;
-    }
-
     public Person(String email, String name, String password, String role) {
         this.email = email;
         this.name = name;

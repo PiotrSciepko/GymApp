@@ -20,37 +20,43 @@ public class PersonController {
         return "/person/list.jsp";
     }
 
-    @PostMapping("/show")
-    public String showPerson(@RequestParam long personId, @RequestParam String personName, @RequestParam String personEmail,
-                             @RequestParam String personRole, Model model) {
-        Person person = new Person(personId, personEmail, personName, personRole);
+    @GetMapping("/show/{id}")
+    public String showPerson(@PathVariable long id, Model model) {
+        Person person = personService.getPerson(id);
         model.addAttribute("person", person);
         return "/person/show.jsp";
     }
 
     @GetMapping("/add")
-    public String addNewPerson() {
+    public String addPerson(Model model) {
+        model.addAttribute("person", new Person());
         return "/person/add.jsp";
     }
 
     @PostMapping("/add")
-    public String addPerson(@RequestParam String personName, @RequestParam String personEmail, @RequestParam String personPassword,
-                            @RequestParam String personRole) {
-        Person person = new Person(personEmail, personName, personService.hashPassword(personPassword), personRole);
+    public String addPerson(Person person) {
+        person.setPassword(personService.hashPassword(person.getPassword()));
         personService.addPerson(person);
         return "redirect:/person/list";
     }
 
-    @PostMapping("/delete")
-    public String deletePerson(@RequestParam long personId) {
-        personService.deletePerson(personId);
+    @GetMapping("/delete/{id}")
+    public String deletePerson(@PathVariable long id) {
+        personService.deletePerson(id);
         return "redirect:/person/list";
     }
 
+    @GetMapping("/update/{id}")
+    public String updatePerson(@PathVariable long id, Model model) {
+        Person person = personService.getPerson(id);
+        person.setPassword("");
+        model.addAttribute("person", person);
+        return "/person/edit.jsp";
+    }
+
     @PostMapping("/update")
-    public String updatePerson(@RequestParam long personId, @RequestParam String personName, @RequestParam String personEmail,
-                               @RequestParam String personPassword, @RequestParam String personRole) {
-        Person person = new Person(personId, personEmail, personName, personService.hashPassword(personPassword), personRole);
+    public String updatePerson(Person person) {
+        person.setPassword(personService.hashPassword(person.getPassword()));
         personService.updatePerson(person);
         return "redirect:/person/list";
     }

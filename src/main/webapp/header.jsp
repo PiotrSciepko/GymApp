@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Gym App</title>
 
     <!-- Custom fonts for this template-->
     <%--  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--%>
@@ -52,6 +52,26 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Nav Item - Users -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/person/list">
+<%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
+                <span>Użytkownicy</span></a>
+        </li>
+
+<%--        <!-- Divider -->--%>
+<%--        <hr class="sidebar-divider d-none d-md-block">--%>
+
+        <!-- Nav Item - Activities -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/activity/list">
+                <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
+                <span>Zajęcia</span></a>
+        </li>
+
+        <%--        <!-- Divider -->--%>
+        <%--        <hr class="sidebar-divider d-none d-md-block">--%>
 
     </ul>
     <!-- End of Sidebar -->

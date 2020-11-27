@@ -1,5 +1,6 @@
 package pl.coderslab.gym;
 
+import pl.coderslab.gym.activity.GroupActivity;
 import pl.coderslab.gym.person.Person;
 
 import javax.persistence.*;
