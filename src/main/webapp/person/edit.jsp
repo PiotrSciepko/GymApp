@@ -15,8 +15,8 @@
     <table class="table">
         <tr style="background-color: white">
             <td>
-                <form:form method="post" modelAttribute="person">
-                    <form:input type="hidden" path="id" value="${person.id}"/>
+                <form:form method="post" modelAttribute="person" action="/person/update">
+                    <form:input type="hidden" path="id"/>
                     <label style="width:100%; padding-bottom: 15px;" >
                         Nazwa <br />
                         <form:input style="width:100%;" path="name"/>
