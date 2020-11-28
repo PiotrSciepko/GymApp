@@ -12,29 +12,23 @@
                 class="fas fa-download fa-sm text-white-50"></i> Dodaj użytkownika</a>
     </div>
     <table class="table">
-
-        <c:set var="personId" value="${person.getId()}"/>
-        <c:set var="personName" value="${person.getName()}"/>
-        <c:set var="personEmail" value="${person.getEmail()}"/>
-        <c:set var="personRole" value="${person.getRole()}"/>
         <tr style="background-color: white">
             <td>Id</td>
-            <td>${personId}</td>
+            <td>${person.id}</td>
         </tr>
         <tr style="background-color: white">
             <td>Nazwa użytkownika</td>
-            <td>${personName.replaceAll("_", " ")}</td>
+            <td>${person.name}</td>
         </tr>
         <tr style="background-color: white">
             <td>Email</td>
-            <td>${personEmail}</td>
+            <td>${person.email}</td>
         </tr>
 
         <tr style="background-color: white">
             <td>Role</td>
-            <td>${personRole}</td>
+            <td>${person.role}</td>
         </tr>
-
     </table>
 
 </div>

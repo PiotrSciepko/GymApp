@@ -1,18 +1,12 @@
 package pl.coderslab.gym.activity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import pl.coderslab.gym.Category;
-import pl.coderslab.gym.Level;
-
+import lombok.*;
+import pl.coderslab.gym.category.Category;
+import pl.coderslab.gym.level.Level;
 import javax.persistence.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 
 @Entity
 @Table(name = "group_activities")

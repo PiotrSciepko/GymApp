@@ -27,25 +27,9 @@
                 <td>${person.email}</td>
                 <td>${person.role}</td>
                 <td>
-
                     <a href="<c:url value="/person/show/${person.id}"/>">pokaż &nbsp</a>
-<%--                    <form action="/person/show"--%>
-<%--                          method="post" style="display:inline; font-size: 10px;">--%>
-<%--                        <input type="hidden" name="personId" value="${person.id}">--%>
-<%--                        <button type="submit" style="background-color: lightgreen; border:none">Pokaż</button>--%>
-<%--                    </form>--%>
                     <a href="<c:url value="/person/update/${person.id}"/>">edytuj &nbsp</a>
-<%--                    <form action="/person/update"--%>
-<%--                          method="get" style="display:inline; font-size: 10px;">--%>
-<%--                        <input type="hidden" name="personId" value="${person.id}">--%>
-<%--                        <button type="submit" style="background-color: gold; border:none">Edytuj</button>--%>
-<%--                    </form>--%>
                     <a href="<c:url value="/person/delete/${person.id}"/>">usuń</a>
-<%--                    <form action="/person/delete"--%>
-<%--                    method="post" style="display:inline; font-size: 10px;">--%>
-<%--                    <input type="hidden" name="personId" value="${person.id}">--%>
-<%--                    <button type="submit" style="background-color: lightcoral; border:none">Usuń</button>--%>
-<%--                    </form>--%>
                 </td>
             </tr>
         </c:forEach>

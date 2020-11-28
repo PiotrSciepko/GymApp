@@ -1,4 +1,4 @@
-package pl.coderslab.gym;
+package pl.coderslab.gym.level;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,9 +13,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "categories")
+@Table(name = "levels")
 
-public class Category {
+public class Level {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

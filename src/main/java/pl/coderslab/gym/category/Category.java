@@ -1,22 +1,16 @@
-package pl.coderslab.gym;
+package pl.coderslab.gym.category;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 
 @Entity
-@Table(name = "levels")
+@Table(name = "categories")
 
-public class Level {
-
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

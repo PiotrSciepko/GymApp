@@ -27,26 +27,9 @@
                 <td>${activity.category.name}</td>
                 <td>${activity.level.name}</td>
                 <td>
-                    <form action="/person/show"
-                          method="post" style="display:inline; font-size: 10px;">
-                        <input type="hidden" name="personId" value="${personId}">
-                        <input type="hidden" name="personName" value="${personName}">
-                        <input type="hidden" name="personEmail" value="${personEmail}">
-                        <input type="hidden" name="personRole" value="${personRole}">
-                        <button type="submit" style="background-color: lightgreen; border:none">Pokaż</button>
-                    </form>
-                    <form action="/person/edit.jsp"
-                          method="post" style="display:inline; font-size: 10px;">
-                        <input type="hidden" name="personId" value="${personId}">
-                        <input type="hidden" name="personName" value="${personName}">
-                        <input type="hidden" name="personEmail" value="${personEmail}">
-                        <button type="submit" style="background-color: gold; border:none">Edytuj</button>
-                    </form>
-                    <form action="/person/delete"
-                          method="post" style="display:inline; font-size: 10px;">
-                        <input type="hidden" name="personId" value="${personId}">
-                        <button type="submit" style="background-color: lightcoral; border:none">Usuń</button>
-                    </form>
+                    <a href="<c:url value="/activity/show/${activity.id}"/>">pokaż &nbsp</a>
+                    <a href="<c:url value="/activity/update/${activity.id}"/>">edytuj &nbsp</a>
+                    <a href="<c:url value="/activity/delete/${activity.id}"/>">usuń</a>
                 </td>
             </tr>
         </c:forEach>
