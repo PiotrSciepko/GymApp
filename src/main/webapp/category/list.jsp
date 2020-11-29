@@ -7,7 +7,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Zajęcia</h1>
+        <h1 class="h3 mb-0 text-gray-800">Kategorie</h1>
         <a href="/category/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Dodaj kategorię</a>
     </div>
@@ -23,8 +23,8 @@
                 <td>${category.id}</td>
                 <td>${category.name}</td>
                 <td>
-                    <a href="<c:url value="/category/show/${category.id}"/>">pokaż &nbsp</a>
-                    <a href="<c:url value="/category/update/${category.id}"/>">edytuj &nbsp</a>
+                    <a href="<c:url value="/category/show/${category.id}"/>">pokaż</a> &nbsp
+                    <a href="<c:url value="/category/update/${category.id}"/>">edytuj</a> &nbsp
                     <a href="<c:url value="/category/delete/${category.id}"/>">usuń</a>
                 </td>
             </tr>

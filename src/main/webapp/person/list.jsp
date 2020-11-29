@@ -27,8 +27,8 @@
                 <td>${person.email}</td>
                 <td>${person.role}</td>
                 <td>
-                    <a href="<c:url value="/person/show/${person.id}"/>">pokaż &nbsp</a>
-                    <a href="<c:url value="/person/update/${person.id}"/>">edytuj &nbsp</a>
+                    <a href="<c:url value="/person/show/${person.id}"/>">pokaż</a> &nbsp
+                    <a href="<c:url value="/person/update/${person.id}"/>">edytuj</a> &nbsp
                     <a href="<c:url value="/person/delete/${person.id}"/>">usuń</a>
                 </td>
             </tr>

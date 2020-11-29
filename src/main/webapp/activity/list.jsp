@@ -27,8 +27,8 @@
                 <td>${activity.category.name}</td>
                 <td>${activity.level.name}</td>
                 <td>
-                    <a href="<c:url value="/activity/show/${activity.id}"/>">pokaż &nbsp</a>
-                    <a href="<c:url value="/activity/update/${activity.id}"/>">edytuj &nbsp</a>
+                    <a href="<c:url value="/activity/show/${activity.id}"/>">pokaż</a> &nbsp
+                    <a href="<c:url value="/activity/update/${activity.id}"/>">edytuj</a> &nbsp
                     <a href="<c:url value="/activity/delete/${activity.id}"/>">usuń</a>
                 </td>
             </tr>
