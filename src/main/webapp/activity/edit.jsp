@@ -8,9 +8,9 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Edycja użytkownika</h1>
+        <h1 class="h3 mb-0 text-gray-800">Edycja</h1>
         <a href="/activity/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Dodaj</a>
+                class="fas fa-download fa-sm text-white-50"></i> Dodaj zajęcia</a>
     </div>
     <table class="table">
         <tr style="background-color: white">
@@ -22,32 +22,14 @@
                     <br/> <br/>
 
                     Kategoria <br/>
-                    <select name="categoryName">
-                        <option>
-                                ${activity.category.name}
-                        </option>
-                        <c:forEach var="category" items="${categories}">
-                            <option>
-                                    ${category.name}
-                            </option>
-                        </c:forEach>
-                    </select>
+                    <form:select path="category.id" items="${categories}" itemValue="id" itemLabel="name"/>
                     <br/> <br/>
 
                     Poziom <br/>
-                    <select name="levelName">
-                        <option>
-                                ${activity.level.name}
-                        </option>
-                        <c:forEach var="level" items="${levels}">
-                            <option>
-                                    ${level.name}
-                            </option>
-                        </c:forEach>
-                    </select>
+                    <form:select path="level.id" items="${levels}" itemValue="id" itemLabel="name"/>
+                    <br/> <br/>
 
-
-                    <br/> <br/> <br/>
+                    <br/>
                     <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz
                     </button>
                 </form:form>

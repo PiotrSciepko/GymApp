@@ -8,6 +8,8 @@ import pl.coderslab.gym.category.CategoryService;
 import pl.coderslab.gym.level.Level;
 import pl.coderslab.gym.level.LevelService;
 
+import java.util.Collection;
+
 @Controller
 @RequestMapping("/activity")
 public class ActivityController {
@@ -38,17 +40,11 @@ public class ActivityController {
     @GetMapping("/add")
     public String addActivity(Model model) {
         model.addAttribute("activity", new GroupActivity());
-        model.addAttribute("categories", categoryService.getCategories());
-        model.addAttribute("levels", levelService.getLevels());
         return "/activity/add.jsp";
     }
 
     @PostMapping("/add")
-    public String addPerson(GroupActivity activity, @RequestParam String categoryName, @RequestParam String levelName) {
-        Category category = categoryService.getCategory(categoryName);
-        Level level = levelService.getLevel(levelName);
-        activity.setCategory(category);
-        activity.setLevel(level);
+    public String addPerson(GroupActivity activity) {
         activityService.addActivity(activity);
         return "redirect:/activity/list";
     }
@@ -62,19 +58,23 @@ public class ActivityController {
     @GetMapping("/update/{id}")
     public String updateActivity(@PathVariable long id, Model model) {
         model.addAttribute("activity", activityService.getActivity(id));
-        model.addAttribute("categories", categoryService.getCategories());
-        model.addAttribute("levels", levelService.getLevels());
         return "/activity/edit.jsp";
     }
 
     @PostMapping("/update")
-    public String updateActivity(GroupActivity activity, @RequestParam String categoryName, @RequestParam String levelName) {
-        Category category = categoryService.getCategory(categoryName);
-        Level level = levelService.getLevel(levelName);
-        activity.setCategory(category);
-        activity.setLevel(level);
+    public String updateActivity(GroupActivity activity) {
         activityService.updateActivity(activity);
         return "redirect:/activity/list";
+    }
+
+    @ModelAttribute("levels")
+    public Collection<Level> levels() {
+        return this.levelService.getLevels();
+    }
+
+    @ModelAttribute("categories")
+    public Collection<Category> categories() {
+        return this.categoryService.getCategories();
     }
 
 

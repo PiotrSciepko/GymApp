@@ -22,9 +22,7 @@
     <!-- Custom styles for this template-->
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
-</head
-
-<body id="page-top">
+</head>
 
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -70,8 +68,15 @@
                 <span>Zajęcia</span></a>
         </li>
 
-        <%--        <!-- Divider -->--%>
-        <%--        <hr class="sidebar-divider d-none d-md-block">--%>
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <p class="nav-link collapsed">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Konfiguracja</span>
+            </p>
+        </li>
 
     </ul>
     <!-- End of Sidebar -->
