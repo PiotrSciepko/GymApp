@@ -83,13 +83,13 @@
         <li class="nav-item active">
             <a class="nav-link" href="/category/list">
                 <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
-                <span>Kategorie zajęć</span></a>
+                <span>Kategoria zajęć</span></a>
         </li>
 
         <li class="nav-item active">
-            <a class="nav-link" href="/category/list">
+            <a class="nav-link" href="/level/list">
                 <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
-                <span>Poziomy zajęć</span></a>
+                <span>Poziom zajęć</span></a>
         </li>
 
     </ul>
