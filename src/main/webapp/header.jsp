@@ -17,7 +17,8 @@
     <%--  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--%>
     <link href="<c:url value="/theme/vendor/fontawesome-free/css/all.min.css" />" rel="stylesheet" type="text/css">
     <%--  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">--%>
-    <link href="<c:url value="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>" rel="stylesheet">
+    <link href="<c:url value="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>"
+          rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
@@ -54,12 +55,12 @@
         <!-- Nav Item - Users -->
         <li class="nav-item active">
             <a class="nav-link" href="/person/list">
-<%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
+                <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
                 <span>Użytkownicy</span></a>
         </li>
 
-<%--        <!-- Divider -->--%>
-<%--        <hr class="sidebar-divider d-none d-md-block">--%>
+        <%--        <!-- Divider -->--%>
+        <%--        <hr class="sidebar-divider d-none d-md-block">--%>
 
         <!-- Nav Item - Activities -->
         <li class="nav-item active">
@@ -67,15 +68,28 @@
                 <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
                 <span>Zajęcia</span></a>
         </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
+        <br/> <br/>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <p class="nav-link collapsed">
+            <p class="nav-link collapsed" style="padding-bottom:0px; padding-top: 0px">
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Konfiguracja</span>
+                <span>Ustawienia:</span>
             </p>
+        </li>
+
+        <!-- Nav Item - Categories -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/category/list">
+                <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
+                <span>Kategorie zajęć</span></a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="/category/list">
+                <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
+                <span>Poziomy zajęć</span></a>
         </li>
 
     </ul>

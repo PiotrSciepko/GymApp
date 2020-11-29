@@ -8,28 +8,18 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Szczegóły użytkownika</h1>
-        <a href="/activity/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Dodaj zajęcia</a>
+        <a href="/category/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Dodaj kategorię</a>
     </div>
     <table class="table">
         <tr style="background-color: white">
             <td>Id</td>
-            <td>${activity.id}</td>
+            <td>${category.id}</td>
         </tr>
         <tr style="background-color: white">
             <td>Nazwa</td>
-            <td>${activity.name}</td>
+            <td>${category.name}</td>
         </tr>
-        <tr style="background-color: white">
-            <td>Kategoria</td>
-            <td>${activity.category.name}</td>
-        </tr>
-
-        <tr style="background-color: white">
-            <td>Poziom</td>
-            <td>${activity.level.name}</td>
-        </tr>
-
     </table>
 
 </div>

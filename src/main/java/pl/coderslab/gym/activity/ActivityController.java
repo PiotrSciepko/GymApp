@@ -44,13 +44,13 @@ public class ActivityController {
     }
 
     @PostMapping("/add")
-    public String addPerson(GroupActivity activity) {
+    public String addActivity(GroupActivity activity) {
         activityService.addActivity(activity);
         return "redirect:/activity/list";
     }
 
     @GetMapping("/delete/{id}")
-    public String deletePerson(@PathVariable long id) {
+    public String deleteActivity(@PathVariable long id) {
         activityService.deleteActivity(id);
         return "redirect:/activity/list";
     }
