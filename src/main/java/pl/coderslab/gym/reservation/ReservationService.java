@@ -36,19 +36,4 @@ public class ReservationService {
     public void updateReservation(Reservation reservation) {
         reservationRepository.save(reservation);
     }
-
-    public List<Person> getReservationPersons(Reservation reservation) {
-        return reservation.getPersons();
-    }
-
-    public String getReservationTrainer(Reservation reservation) {
-        for (Person reservationPerson : getReservationPersons(reservation)) {
-            String role = reservationPerson.getRole();
-            if (role.equals("trainer")) {
-                return reservationPerson.getName();
-            }
-        }
-        return null;
-    }
-
 }
