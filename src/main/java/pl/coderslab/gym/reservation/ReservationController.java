@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.gym.activity.ActivityService;
 import pl.coderslab.gym.activity.GroupActivity;
+import pl.coderslab.gym.level.Level;
 import pl.coderslab.gym.person.Person;
 import pl.coderslab.gym.person.PersonService;
 
@@ -48,6 +49,24 @@ public class ReservationController {
     @PostMapping("/add")
     public String addReservation(Reservation reservation) {
         reservationService.addReservation(reservation);
+        return "redirect:/reservation/list";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteLevel(@PathVariable long id) {
+        reservationService.deleteReservation(id);
+        return "redirect:/reservation/list";
+    }
+
+    @GetMapping("/update/{id}")
+    public String updateReservation(@PathVariable long id, Model model) {
+        model.addAttribute("reservation", reservationService.getReservation(id));
+        return "/reservation/edit.jsp";
+    }
+
+    @PostMapping("/update")
+    public String updateReservation(Reservation reservation) {
+        reservationService.updateReservation(reservation);
         return "redirect:/reservation/list";
     }
 
