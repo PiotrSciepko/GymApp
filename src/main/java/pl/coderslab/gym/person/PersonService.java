@@ -36,6 +36,10 @@ public class PersonService {
         personRepository.save(person);
     }
 
+    public List<Person> getTrainers() {
+        return personRepository.findByRole("trainer");
+    }
+
     public String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }

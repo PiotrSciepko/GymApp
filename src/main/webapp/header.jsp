@@ -68,6 +68,13 @@
                 <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
                 <span>Zajęcia</span></a>
         </li>
+
+        <!-- Nav Item - Reservations -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/reservation/list">
+                <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
+                <span>Grafik zajęć</span></a>
+        </li>
         <br/> <br/>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
