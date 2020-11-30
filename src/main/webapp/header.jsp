@@ -44,9 +44,9 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="/person/list">
+            <a class="nav-link" href="/reservation/list">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Grafik zajęć</span></a>
         </li>
 
         <!-- Divider -->
@@ -67,13 +67,6 @@
             <a class="nav-link" href="/activity/list">
                 <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
                 <span>Zajęcia</span></a>
-        </li>
-
-        <!-- Nav Item - Reservations -->
-        <li class="nav-item active">
-            <a class="nav-link" href="/reservation/list">
-                <%--                <i class="fas fa-fw fa-tachometer-alt"></i>--%>
-                <span>Grafik zajęć</span></a>
         </li>
         <br/> <br/>
         <!-- Divider -->
