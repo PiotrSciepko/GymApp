@@ -20,14 +20,17 @@
                     <label style="width:100%; padding-bottom: 15px;" >
                         Nazwa <br />
                         <form:input style="width:100%;" path="name"/>
+                        <form:errors path="name"/>
                     </label><br />
                     <label style="width:100%;padding-bottom: 15px;">
                         Email <br />
                         <form:input style="width: 100%;" path="email"/>
+                        <form:errors path="email"/>
                     </label><br />
                     <label style="width:100%;padding-bottom: 15px;">
                         Hasło <br />
-                        <form:input style="width: 100%;" path="password"/>
+                        <form:input style="width: 100%;" path="password" type="password"/>
+                        <form:errors path="password"/>
                     </label><br />
                     <label style="width:100%;padding-bottom: 15px;">
                         Rola <br />

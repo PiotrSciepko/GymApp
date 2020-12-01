@@ -1,17 +1,10 @@
 package pl.coderslab.gym.level;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
+import lombok.*;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-
+@Data
 @Entity
 @Table(name = "levels")
 
@@ -20,5 +13,7 @@ public class Level {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotBlank(message = "Pole nie może być puste")
     private String name;
 }

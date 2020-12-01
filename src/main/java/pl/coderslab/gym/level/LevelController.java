@@ -2,10 +2,13 @@ package pl.coderslab.gym.level;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/level")
@@ -37,7 +40,10 @@ public class LevelController {
     }
 
     @PostMapping("/add")
-    public String addLevel(Level level) {
+    public String addLevel(@Valid Level level, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/level/edit.jsp";
+        }
         levelService.addLevel(level);
         return "redirect:/level/list";
     }
@@ -55,7 +61,10 @@ public class LevelController {
     }
 
     @PostMapping("/update")
-    public String updateCategory(Level level) {
+    public String updateCategory(@Valid Level level, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/level/edit.jsp";
+        }
         levelService.updateLevel(level);
         return "redirect:/level/list";
     }

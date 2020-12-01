@@ -2,6 +2,7 @@ package pl.coderslab.gym.reservation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.gym.activity.ActivityService;
 import pl.coderslab.gym.activity.GroupActivity;

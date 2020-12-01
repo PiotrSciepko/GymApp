@@ -16,27 +16,37 @@
             <tr>
                 <th style="border: none">${day}</th>
             </tr>
-            <c:forEach items="${hours}" var="hour">
-                <c:forEach items="${reservations}" var="reservation">
-                    <c:if test="${reservation.day == day and reservation.hour == hour}">
-                        <tr style="background-color: white">
-                            <td style="text-align: right; padding-right: 40px; width:60px">${reservation.hour}:00</td>
-                            <td>${reservation.groupActivity.name}</td>
-                            <td>
+            <%--            <c:forEach items="${hours}" var="hour">--%>
+            <c:forEach items="${reservations}" var="reservation">
+                <c:if test="${reservation.day == day}">
+                    <tr style="background-color: white">
+                        <td style="text-align: right; padding-right: 40px; width:60px">${reservation.hour}:00</td>
+                        <td><b>${reservation.groupActivity.name}</b><br/><br/>
+                            <i>Kategoria: ${reservation.groupActivity.category.name}</i>
+                            <br/>
+                            <i>Poziom: ${reservation.groupActivity.level.name}</i>
+                        </td>
+                        <td>
+                            <i>Trenerzy:<br/></i>
+                            <ul>
                                 <c:forEach items="${reservation.reservationTrainers}" var="trainer">
-                                    ${trainer}<br/>
+
+                                    <li>
+                                            ${trainer}<br/>
+                                    </li>
                                 </c:forEach>
-                            </td>
-                            <td>
-                                <a href="<c:url value="/reservation/show/${reservation.id}"/>">pokaż</a> &nbsp
-                                <a href="<c:url value="/reservation/update/${reservation.id}"/>">edytuj</a> &nbsp
-                                <a href="<c:url value="/reservation/delete/${reservation.id}"/>">usuń</a>
-                            </td>
-                        </tr>
-                    </c:if>
-                </c:forEach>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href="<c:url value="/reservation/show/${reservation.id}"/>">pokaż</a> &nbsp
+                            <a href="<c:url value="/reservation/update/${reservation.id}"/>">edytuj</a> &nbsp
+                            <a href="<c:url value="/reservation/delete/${reservation.id}"/>">usuń</a>
+                        </td>
+                    </tr>
+                </c:if>
             </c:forEach>
         </c:forEach>
+        <%--        </c:forEach>--%>
 
 
     </table>

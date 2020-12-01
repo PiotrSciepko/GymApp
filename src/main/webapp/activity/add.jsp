@@ -18,6 +18,7 @@
                 <form:form method="post" modelAttribute="activity">
                     Nazwa <br/>
                     <form:input style="width:100%;" path="name" placeholder="Nazwa zajęć"/>
+                    <form:errors path="name"/>
                     <br/> <br/>
 
                     Kategoria <br/>

@@ -2,7 +2,10 @@ package pl.coderslab.gym.person;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/person")
@@ -34,7 +37,10 @@ public class PersonController {
     }
 
     @PostMapping("/add")
-    public String addPerson(Person person) {
+    public String addPerson(@Valid Person person, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/person/add.jsp";
+        }
         person.setPassword(personService.hashPassword(person.getPassword()));
         personService.addPerson(person);
         return "redirect:/person/list";
@@ -55,7 +61,10 @@ public class PersonController {
     }
 
     @PostMapping("/update")
-    public String updatePerson(Person person) {
+    public String updatePerson(@Valid Person person, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/person/edit.jsp";
+        }
         person.setPassword(personService.hashPassword(person.getPassword()));
         personService.updatePerson(person);
         return "redirect:/person/list";

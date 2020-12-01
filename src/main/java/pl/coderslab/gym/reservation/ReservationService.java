@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import pl.coderslab.gym.person.Person;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,7 +18,9 @@ public class ReservationService {
     }
 
     public List<Reservation> getReservations() {
-        return reservationRepository.findAll();
+        List<Reservation> reservations = reservationRepository.findAll();
+        Collections.sort(reservations);
+        return reservations;
     }
 
     public Reservation getReservation(long id) {

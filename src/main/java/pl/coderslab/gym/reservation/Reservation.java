@@ -9,11 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-
 @Entity
 @Table(name="reservations")
 
-public class Reservation {
+public class Reservation implements Comparable<Reservation> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,5 +38,8 @@ public class Reservation {
         return reservationTrainers;
     }
 
-
+    @Override
+    public int compareTo(Reservation o) {
+        return Integer.parseInt(this.hour) - (Integer.parseInt(o.hour));
+    }
 }

@@ -19,14 +19,18 @@
                     <label style="width:100%; padding-bottom: 15px;">
                         Nazwa <br/>
                         <form:input style="width:100%;" path="name" placeholder="Nazwa użytkownika"/>
+                        <form:errors path="name"/>
                     </label><br/>
                     <label style="width:100%;padding-bottom: 15px;">
                         Email <br/>
                         <form:input style="width: 100%;" path="email" placeholder="Email użytkownika"/>
+                        <form:errors path="email"/>
                     </label><br/>
                     <label style="width:100%;padding-bottom: 15px;">
                         Hasło <br/>
-                        <form:input style="width: 100%;" path="password" placeholder="Hasło użytkownika"/>
+                        <form:input style="width: 100%;" path="password" placeholder="Hasło użytkownika"
+                                    type="password"/>
+                        <form:errors path="password"/>
                     </label><br/>
                     <label style="width:100%;padding-bottom: 15px;">
                         Rola <br/>

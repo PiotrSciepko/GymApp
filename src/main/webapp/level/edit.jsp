@@ -19,6 +19,7 @@
                     <form:input type="hidden" path="id"/>
                     Nazwa <br/>
                     <form:input style="width:100%;" path="name"/>
+                    <form:errors path="name"/>
                     <br/> <br/>
 
                     <br/>

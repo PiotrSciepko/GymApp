@@ -2,12 +2,14 @@ package pl.coderslab.gym.activity;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.gym.category.Category;
 import pl.coderslab.gym.category.CategoryService;
 import pl.coderslab.gym.level.Level;
 import pl.coderslab.gym.level.LevelService;
 
+import javax.validation.Valid;
 import java.util.Collection;
 
 @Controller
@@ -44,7 +46,10 @@ public class ActivityController {
     }
 
     @PostMapping("/add")
-    public String addActivity(GroupActivity activity) {
+    public String addActivity(@ModelAttribute("activity") @Valid GroupActivity activity, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/activity/add.jsp";
+        }
         activityService.addActivity(activity);
         return "redirect:/activity/list";
     }
@@ -62,7 +67,10 @@ public class ActivityController {
     }
 
     @PostMapping("/update")
-    public String updateActivity(GroupActivity activity) {
+    public String updateActivity(@ModelAttribute("activity") @Valid GroupActivity activity, BindingResult result) {
+        if (result.hasErrors()) {
+            return "/activity/add.jsp";
+        }
         activityService.updateActivity(activity);
         return "redirect:/activity/list";
     }
