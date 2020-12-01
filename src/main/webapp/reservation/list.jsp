@@ -22,9 +22,9 @@
                     <tr style="background-color: white">
                         <td style="text-align: right; padding-right: 40px; width:60px">${reservation.hour}:00</td>
                         <td><b>${reservation.groupActivity.name}</b><br/><br/>
-                            <i>Kategoria: ${reservation.groupActivity.category.name}</i>
+                            <i>kategoria:</i> ${reservation.groupActivity.category.name}
                             <br/>
-                            <i>Poziom: ${reservation.groupActivity.level.name}</i>
+                            <i>poziom:</i> ${reservation.groupActivity.level.name}
                         </td>
                         <td>
                             <i>Trenerzy:<br/></i>
