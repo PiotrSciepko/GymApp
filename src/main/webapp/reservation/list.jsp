@@ -12,31 +12,32 @@
                 class="fas fa-download fa-sm text-white-50"></i>Dodaj zajęcia do grafiku</a>
     </div>
     <table class="table">
-        <tr style="background-color: white">
-            <th>Dzień</th>
-            <th>Godzina</th>
-            <th>Zajęcia</th>
-            <th>Trener</th>
-            <th>Akcja</th>
-        </tr>
-
-        <c:forEach items="${reservations}" var="reservation">
-            <tr style="background-color: white">
-                <td>${reservation.day}</td>
-                <td>${reservation.hour}</td>
-                <td>${reservation.groupActivity.name}</td>
-                <td>
-                    <c:forEach items="${reservation.reservationTrainers}" var="trainer">
-                        ${trainer}<br/>
-                    </c:forEach>
-                        </td>
-                <td>
-                    <a href="<c:url value="/reservation/show/${reservation.id}"/>">pokaż</a> &nbsp
-                    <a href="<c:url value="/reservation/update/${reservation.id}"/>">edytuj</a> &nbsp
-                    <a href="<c:url value="/reservation/delete/${reservation.id}"/>">usuń</a>
-                </td>
+        <c:forEach items="${days}" var="day">
+            <tr>
+                <th style="border: none">${day}</th>
             </tr>
+            <c:forEach items="${hours}" var="hour">
+                <c:forEach items="${reservations}" var="reservation">
+                    <c:if test="${reservation.day == day and reservation.hour == hour}">
+                        <tr style="background-color: white">
+                            <td style="text-align: right; padding-right: 40px; width:60px">${reservation.hour}:00</td>
+                            <td>${reservation.groupActivity.name}</td>
+                            <td>
+                                <c:forEach items="${reservation.reservationTrainers}" var="trainer">
+                                    ${trainer}<br/>
+                                </c:forEach>
+                            </td>
+                            <td>
+                                <a href="<c:url value="/reservation/show/${reservation.id}"/>">pokaż</a> &nbsp
+                                <a href="<c:url value="/reservation/update/${reservation.id}"/>">edytuj</a> &nbsp
+                                <a href="<c:url value="/reservation/delete/${reservation.id}"/>">usuń</a>
+                            </td>
+                        </tr>
+                    </c:if>
+                </c:forEach>
+            </c:forEach>
         </c:forEach>
+
 
     </table>
 

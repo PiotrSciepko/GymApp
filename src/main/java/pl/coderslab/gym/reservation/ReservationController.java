@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.gym.activity.ActivityService;
 import pl.coderslab.gym.activity.GroupActivity;
-import pl.coderslab.gym.level.Level;
 import pl.coderslab.gym.person.Person;
 import pl.coderslab.gym.person.PersonService;
 
@@ -21,7 +20,8 @@ public class ReservationController {
     private final ActivityService activityService;
     private final PersonService personService;
 
-    public ReservationController(ReservationService reservationService, ActivityService activityService, PersonService personService) {
+    public ReservationController(ReservationService reservationService, ActivityService activityService,
+                                 PersonService personService) {
         this.reservationService = reservationService;
         this.activityService = activityService;
         this.personService = personService;
@@ -53,7 +53,7 @@ public class ReservationController {
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteLevel(@PathVariable long id) {
+    public String deleteReservation(@PathVariable long id) {
         reservationService.deleteReservation(id);
         return "redirect:/reservation/list";
     }
@@ -93,6 +93,4 @@ public class ReservationController {
     public Collection<Person> trainers() {
         return this.personService.getTrainers();
     }
-
-
 }
