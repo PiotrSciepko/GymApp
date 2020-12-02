@@ -45,11 +45,11 @@
                         </tr>
                     </table>
                     <br/>
-
                 </form:form>
             </td>
         </tr>
     </table>
+    ${error}
 
 </div>
 <!-- /.container-fluid -->

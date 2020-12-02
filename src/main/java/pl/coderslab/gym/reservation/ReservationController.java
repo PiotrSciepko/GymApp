@@ -47,9 +47,12 @@ public class ReservationController {
     }
 
     @PostMapping("/add")
-    public String addReservation(Reservation reservation) {
-        reservationService.addReservation(reservation);
-        return "redirect:/reservation/list";
+    public String addReservation(Reservation reservation, Model model) {
+        if (reservationService.addReservation(reservation)) {
+            return "redirect:/reservation/list";
+        }
+        model.addAttribute("error", "Błąd: Zajęcia o tej porze już istnieją!");
+        return "/reservation/add";
     }
 
     @GetMapping("/delete/{id}")
@@ -65,9 +68,12 @@ public class ReservationController {
     }
 
     @PostMapping("/update")
-    public String updateReservation(Reservation reservation) {
-        reservationService.updateReservation(reservation);
-        return "redirect:/reservation/list";
+    public String updateReservation(Reservation reservation, Model model) {
+        if (reservationService.addReservation(reservation)) {
+            return "redirect:/reservation/list";
+        }
+        model.addAttribute("error", "Błąd: Zajęcia o tej porze już istnieją!");
+        return "/reservation/edit";
     }
 
     @ModelAttribute("days")

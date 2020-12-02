@@ -28,8 +28,14 @@ public class ReservationService {
         return byId.orElse(null);
     }
 
-    public void addReservation(Reservation reservation) {
+    public boolean addReservation(Reservation reservation) {
+        List<Reservation> byDayAndByHour = reservationRepository.
+                findReservationsByDayAndHour(reservation.getDay(), reservation.getHour());
+        if (!byDayAndByHour.isEmpty()) {
+            return false;
+        }
         reservationRepository.save(reservation);
+        return true;
     }
 
     public void deleteReservation(long id) {
