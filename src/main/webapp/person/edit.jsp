@@ -26,6 +26,7 @@
                         Email <br />
                         <form:input style="width: 100%;" path="email"/>
                         <form:errors path="email"/>
+                        ${error}
                     </label><br />
                     <label style="width:100%;padding-bottom: 15px;">
                         Hasło <br />

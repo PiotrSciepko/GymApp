@@ -24,16 +24,28 @@ public class PersonService {
         return byId.orElse(null);
     }
 
-    public void addPerson(Person person) {
+    public boolean addPerson(Person person) {
+        if (!personRepository.findByEmail(person.getEmail()).isEmpty()) {
+            return false;
+        }
         personRepository.save(person);
+        return true;
     }
 
     public void deletePerson(long id) {
         personRepository.deleteById(id);
     }
 
-    public void updatePerson(Person person) {
+    public boolean updatePerson(Person person) {
+        Person byId = getPerson(person.getId());
+        List<Person> byEmail = personRepository.findByEmail(person.getEmail());
+        if (!byEmail.isEmpty()) {
+            if (!byId.getEmail().equals(person.getEmail())) {
+                return false;
+            }
+        }
         personRepository.save(person);
+        return true;
     }
 
     public List<Person> getTrainers() {

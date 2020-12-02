@@ -37,13 +37,17 @@ public class PersonController {
     }
 
     @PostMapping("/add")
-    public String addPerson(@Valid Person person, BindingResult result) {
+    public String addPerson(@Valid Person person, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "/person/add";
         }
-        person.setPassword(personService.hashPassword(person.getPassword()));
-        personService.addPerson(person);
-        return "redirect:/person/list";
+        if (personService.addPerson(person)) {
+            person.setPassword(personService.hashPassword(person.getPassword()));
+            personService.addPerson(person);
+            return "redirect:/person/list";
+        }
+        model.addAttribute("error", "Taki email już istnieje");
+        return "/person/add";
     }
 
     @GetMapping("/delete/{id}")
@@ -61,12 +65,15 @@ public class PersonController {
     }
 
     @PostMapping("/update")
-    public String updatePerson(@Valid Person person, BindingResult result) {
+    public String updatePerson(@Valid Person person, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "/person/edit";
+        } else if (personService.updatePerson(person)) {
+            person.setPassword(personService.hashPassword(person.getPassword()));
+            personService.updatePerson(person);
+            return "redirect:/person/list";
         }
-        person.setPassword(personService.hashPassword(person.getPassword()));
-        personService.updatePerson(person);
-        return "redirect:/person/list";
+        model.addAttribute("error", "Taki email już istnieje");
+        return "/person/edit";
     }
 }
