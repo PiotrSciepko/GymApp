@@ -20,26 +20,26 @@ public class PersonController {
     @GetMapping("/list")
     public String personList(Model model) {
         model.addAttribute("persons", personService.getPersons());
-        return "/person/list.jsp";
+        return "/person/list";
     }
 
     @GetMapping("/show/{id}")
     public String showPerson(@PathVariable long id, Model model) {
         Person person = personService.getPerson(id);
         model.addAttribute("person", person);
-        return "/person/show.jsp";
+        return "/person/show";
     }
 
     @GetMapping("/add")
     public String addPerson(Model model) {
         model.addAttribute("person", new Person());
-        return "/person/add.jsp";
+        return "/person/add";
     }
 
     @PostMapping("/add")
     public String addPerson(@Valid Person person, BindingResult result) {
         if (result.hasErrors()) {
-            return "/person/add.jsp";
+            return "/person/add";
         }
         person.setPassword(personService.hashPassword(person.getPassword()));
         personService.addPerson(person);
@@ -57,13 +57,13 @@ public class PersonController {
         Person person = personService.getPerson(id);
         person.setPassword("");
         model.addAttribute("person", person);
-        return "/person/edit.jsp";
+        return "/person/edit";
     }
 
     @PostMapping("/update")
     public String updatePerson(@Valid Person person, BindingResult result) {
         if (result.hasErrors()) {
-            return "/person/edit.jsp";
+            return "/person/edit";
         }
         person.setPassword(personService.hashPassword(person.getPassword()));
         personService.updatePerson(person);

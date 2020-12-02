@@ -23,26 +23,26 @@ public class LevelController {
     @GetMapping("/list")
     public String levelList(Model model) {
         model.addAttribute("levels", levelService.getLevels());
-        return "/level/list.jsp";
+        return "/level/list";
     }
 
     @GetMapping("/show/{id}")
     public String showLevel(@PathVariable long id, Model model) {
         Level level = levelService.getLevel(id);
         model.addAttribute("level", level);
-        return "/level/show.jsp";
+        return "/level/show";
     }
 
     @GetMapping("/add")
     public String addLevel(Model model) {
         model.addAttribute("level", new Level());
-        return "/level/add.jsp";
+        return "/level/add";
     }
 
     @PostMapping("/add")
     public String addLevel(@Valid Level level, BindingResult result) {
         if (result.hasErrors()) {
-            return "/level/edit.jsp";
+            return "/level/edit";
         }
         levelService.addLevel(level);
         return "redirect:/level/list";
@@ -57,13 +57,13 @@ public class LevelController {
     @GetMapping("/update/{id}")
     public String updateLevel(@PathVariable long id, Model model) {
         model.addAttribute("level", levelService.getLevel(id));
-        return "/level/edit.jsp";
+        return "/level/edit";
     }
 
     @PostMapping("/update")
     public String updateCategory(@Valid Level level, BindingResult result) {
         if (result.hasErrors()) {
-            return "/level/edit.jsp";
+            return "/level/edit";
         }
         levelService.updateLevel(level);
         return "redirect:/level/list";

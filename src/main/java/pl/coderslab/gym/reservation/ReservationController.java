@@ -2,7 +2,6 @@ package pl.coderslab.gym.reservation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.gym.activity.ActivityService;
 import pl.coderslab.gym.activity.GroupActivity;
@@ -31,20 +30,20 @@ public class ReservationController {
     @GetMapping("/list")
     public String reservationList(Model model) {
         model.addAttribute("reservations", reservationService.getReservations());
-        return "/reservation/list.jsp";
+        return "/reservation/list";
     }
 
     @GetMapping("/show/{id}")
     public String showReservation(@PathVariable long id, Model model) {
         Reservation reservation = reservationService.getReservation(id);
         model.addAttribute("reservation", reservation);
-        return "/reservation/show.jsp";
+        return "/reservation/show";
     }
 
     @GetMapping("/add")
     public String addReservation(Model model) {
         model.addAttribute("reservation", new Reservation());
-        return "/reservation/add.jsp";
+        return "/reservation/add";
     }
 
     @PostMapping("/add")
@@ -62,7 +61,7 @@ public class ReservationController {
     @GetMapping("/update/{id}")
     public String updateReservation(@PathVariable long id, Model model) {
         model.addAttribute("reservation", reservationService.getReservation(id));
-        return "/reservation/edit.jsp";
+        return "/reservation/edit";
     }
 
     @PostMapping("/update")

@@ -29,20 +29,20 @@ public class ActivityController {
     @GetMapping("/list")
     public String activityList(Model model) {
         model.addAttribute("activities", activityService.getActivities());
-        return "/activity/list.jsp";
+        return "/activity/list";
     }
 
     @GetMapping("/show/{id}")
     public String showActivity(@PathVariable long id, Model model) {
         GroupActivity activity = activityService.getActivity(id);
         model.addAttribute("activity", activity);
-        return "/activity/show.jsp";
+        return "/activity/show";
     }
 
     @GetMapping("/add")
     public String addActivity(Model model) {
         model.addAttribute("activity", new GroupActivity());
-        return "/activity/add.jsp";
+        return "/activity/add";
     }
 
     @PostMapping("/add")
@@ -63,13 +63,13 @@ public class ActivityController {
     @GetMapping("/update/{id}")
     public String updateActivity(@PathVariable long id, Model model) {
         model.addAttribute("activity", activityService.getActivity(id));
-        return "/activity/edit.jsp";
+        return "/activity/edit";
     }
 
     @PostMapping("/update")
     public String updateActivity(@ModelAttribute("activity") @Valid GroupActivity activity, BindingResult result) {
         if (result.hasErrors()) {
-            return "/activity/add.jsp";
+            return "/activity/add";
         }
         activityService.updateActivity(activity);
         return "redirect:/activity/list";
