@@ -48,7 +48,7 @@ public class ActivityController {
     @PostMapping("/add")
     public String addActivity(@ModelAttribute("activity") @Valid GroupActivity activity, BindingResult result) {
         if (result.hasErrors()) {
-            return "/activity/add.jsp";
+            return "/activity/add";
         }
         activityService.addActivity(activity);
         return "redirect:/activity/list";
