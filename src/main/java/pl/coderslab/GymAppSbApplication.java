@@ -11,9 +11,4 @@ public class GymAppSbApplication {
     public static void main(String[] args) {
         SpringApplication.run(GymAppSbApplication.class, args);
     }
-
-    @Bean
-    public LocalValidatorFactoryBean validator() {
-        return new LocalValidatorFactoryBean();
-    }
 }
