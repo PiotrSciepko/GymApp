@@ -16,7 +16,6 @@
             <tr>
                 <th style="border: none">${day}</th>
             </tr>
-            <%--            <c:forEach items="${hours}" var="hour">--%>
             <c:forEach items="${reservations}" var="reservation">
                 <c:if test="${reservation.day == day}">
                     <tr style="background-color: white">
@@ -30,12 +29,12 @@
                             <i>Trenerzy:<br/></i>
                             <ul>
                                 <c:forEach items="${reservation.reservationTrainers}" var="trainer">
-
                                     <li>
                                             ${trainer}<br/>
                                     </li>
                                 </c:forEach>
                             </ul>
+<%--                            <i><a href="c:url" value="">Uczestnicy</a></i>--%>
                         </td>
                         <td>
                             <a href="<c:url value="/reservation/show/${reservation.id}"/>">pokaż</a> &nbsp
@@ -46,12 +45,9 @@
                 </c:if>
             </c:forEach>
         </c:forEach>
-        <%--        </c:forEach>--%>
-
-
     </table>
 
 </div>
-<!-- /.container-fluid -->
+<%--<!-- /.container-fluid -->--%>
 
 <%@ include file="/footer.jsp" %>

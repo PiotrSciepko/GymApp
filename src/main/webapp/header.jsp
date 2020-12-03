@@ -24,7 +24,10 @@
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 </head>
-
+<body style="max-width: 1300px; margin: 0 auto;
+        background-image: url('/img/gym1.jpg'); background-attachment: fixed; background-size: cover ;
+        background-repeat: no-repeat">
+<%--; background:#3a3b45--%>
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -32,7 +35,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/person/list">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/reservation/list">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -101,13 +104,13 @@
         <!-- Main Content -->
         <div id="content">
 
-            <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <%--            <!-- Topbar -->--%>
+            <%--            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">--%>
 
-                <!-- Sidebar Toggle (Topbar) -->
-                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                    <i class="fa fa-bars"></i>
-                </button>
+            <%--                <!-- Sidebar Toggle (Topbar) -->--%>
+            <%--                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">--%>
+            <%--                    <i class="fa fa-bars"></i>--%>
+            <%--                </button>--%>
 
-            </nav>
+            <%--            </nav>--%>
             <!-- End of Topbar -->
