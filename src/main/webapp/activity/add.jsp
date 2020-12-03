@@ -29,7 +29,7 @@
                     <form:select path="level.id" items="${levels}" itemValue="id" itemLabel="name"/>
                     <br/> <br/>
 
-                    <br/> <br/> <br/>
+                    <br/>
                     <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz
                     </button>
                 </form:form>
