@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Piotr Ściepko">
 
     <title>Gym App</title>
 
@@ -24,12 +24,12 @@
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 </head>
-<body style="max-width: 1300px; margin: 0 auto;
-        background-image: url('/img/gym1.jpg'); background-attachment: fixed; background-size: cover ;
-        background-repeat: no-repeat">
+<body style="max-width:1300px; margin: 0px auto; background-image:
+        url('http://www.bialystokonline.pl/gfx_prezentacje/kat/11215/6806_11215.jpg'); background-attachment: fixed;
+         background-size: cover; background-repeat: no-repeat">
 <%--; background:#3a3b45--%>
 <!-- Page Wrapper -->
-<div id="wrapper">
+<div id="wrapper" style="margin: 0 auto;">
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -98,7 +98,7 @@
     </ul>
     <!-- End of Sidebar -->
 
-    <!-- Content Wrapper -->
+    <!--  Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
