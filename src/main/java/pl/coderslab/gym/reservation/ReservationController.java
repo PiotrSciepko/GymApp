@@ -9,6 +9,7 @@ import pl.coderslab.gym.person.Person;
 import pl.coderslab.gym.person.PersonService;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -78,7 +79,7 @@ public class ReservationController {
 
     @ModelAttribute("days")
     public Collection<String> days() {
-        return List.of("poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela");
+        return Arrays.asList("poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela");
     }
 
     @ModelAttribute("hours")
