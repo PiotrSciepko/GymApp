@@ -1,9 +1,7 @@
 package pl.coderslab.gym.reservation;
 
 import org.springframework.stereotype.Service;
-import pl.coderslab.gym.person.Person;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +28,7 @@ public class ReservationService {
 
     public boolean addReservation(Reservation reservation) {
         List<Reservation> byDayAndByHour = reservationRepository.
-                findReservationsByDayAndHour(reservation.getDay(), reservation.getHour());
+                findReservationsByDayAndHourAndGroupActivity(reservation.getDay(), reservation.getHour(), reservation.getGroupActivity());
         if (!byDayAndByHour.isEmpty()) {
             return false;
         }
@@ -42,7 +40,16 @@ public class ReservationService {
         reservationRepository.deleteById(id);
     }
 
-    public void updateReservation(Reservation reservation) {
+    public boolean updateReservation(Reservation reservation) {
+        Reservation byId = getReservation(reservation.getId());
+        List<Reservation> byDayAndHourAndActivity = reservationRepository.
+                findReservationsByDayAndHourAndGroupActivity(reservation.getDay(), reservation.getHour(), reservation.getGroupActivity());
+        if (!byDayAndHourAndActivity.isEmpty()) {
+            if (byId.getReservationTrainers().equals(reservation.getReservationTrainers())) {
+                return false;
+            }
+        }
         reservationRepository.save(reservation);
+        return true;
     }
 }
