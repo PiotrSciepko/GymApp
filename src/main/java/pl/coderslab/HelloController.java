@@ -12,7 +12,7 @@ public class HelloController {
 
     @GetMapping("")
     public String hello() {
-        return "/reservation/list";
+        return "redirect:/reservation/list";
     }
 
 
