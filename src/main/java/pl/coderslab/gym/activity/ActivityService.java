@@ -1,7 +1,8 @@
 package pl.coderslab.gym.activity;
 
 import org.springframework.stereotype.Service;
-import java.util.List;
+
+import java.util.Collection;
 import java.util.Optional;
 
 @Service
@@ -13,8 +14,8 @@ public class ActivityService {
         this.activityRepository = activityRepository;
     }
 
-    public List<GroupActivity> getActivities() {
-        return activityRepository.findAll();
+    public Collection<GroupActivity> getActivities() {
+        return activityRepository.findAllByOrderById();
     }
 
     public GroupActivity getActivity(long id) {
