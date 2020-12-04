@@ -22,7 +22,7 @@
         </tr>
         <tr style="background-color: white">
             <td>Godzina</td>
-            <td>${reservation.hour}</td>
+            <td>${reservation.hour}:00</td>
         </tr>
         <tr style="background-color: white">
             <td>Zajęcia</td>
