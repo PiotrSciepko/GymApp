@@ -24,10 +24,10 @@
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 </head>
-<body style="max-width:1300px; margin: 0px auto; background:#3a3b45">
-<%--/*background-image: url('/img/gym1.jpg'); background-attachment: fixed;*/--%>
-<%--        /*url('http://www.bialystokonline.pl/gfx_prezentacje/kat/11215/6806_11215.jpg'); background-attachment: fixed;*/--%>
-        <%-- background-size: cover; background-repeat: no-repeat">--%>
+<body style="max-width:1300px; margin: 0px auto;
+background-image: url('/img/gym1.jpg'); background-attachment: fixed;
+        /*url('http://www.bialystokonline.pl/gfx_prezentacje/kat/11215/6806_11215.jpg'); background-attachment: fixed;*/
+         background-size: cover; background-repeat: no-repeat">
 <%--; background:#3a3b45--%>
 <!-- Page Wrapper -->
 <div id="wrapper" style="margin: 0 auto;">
