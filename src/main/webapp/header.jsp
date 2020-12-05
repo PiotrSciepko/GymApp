@@ -24,7 +24,7 @@
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 </head>
-<body style="max-width:1300px; margin: 0 auto;
+<body style="max-width:1300px; min-width:600px; margin: 0 auto;
 background-image: url('/img/gym1.jpg'); background-attachment: fixed;
         /*url('http://www.bialystokonline.pl/gfx_prezentacje/kat/11215/6806_11215.jpg'); background-attachment: fixed;*/
          background-size: cover; background-repeat: no-repeat">
@@ -100,7 +100,7 @@ background-image: url('/img/gym1.jpg'); background-attachment: fixed;
     <!-- End of Sidebar -->
 
     <!--  Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column" style="min-width:100%">
 
         <!-- Main Content -->
         <div id="content">
