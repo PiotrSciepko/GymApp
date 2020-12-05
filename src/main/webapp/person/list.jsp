@@ -8,16 +8,16 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Lista użytkowników</h1>
-        <a href="/person/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Dodaj użytkownika</a>
+        <a href="/person/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><em
+                class="fas fa-download fa-sm text-white-50"></em> Dodaj użytkownika</a>
     </div>
     <table class="table">
         <tr style="background-color: white">
-            <th>Id</th>
-            <th>Nazwa użytkownika</th>
-            <th>Email</th>
-            <th>Rola</th>
-            <th>Akcja</th>
+            <th scope="col">Id</th>
+            <th scope="col">Nazwa użytkownika</th>
+            <th scope="col">Email</th>
+            <th scope="col">Rola</th>
+            <th scope="col">Akcja</th>
         </tr>
 
         <c:forEach items="${persons}" var="person">
