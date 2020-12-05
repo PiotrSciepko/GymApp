@@ -21,10 +21,10 @@ public class Person {
     @Column(unique = true)
     @NotBlank(message = "Pole nie może być puste")
     @Email(message = "Niepoprawny email")
-//    @Pattern(regexp = "^[a-zA-Z]*(\\.*[a-zA-Z]+[a-zA-Z0-9_])+@[a-zA-Z]*(\\.*[a-zA-Z]+[a-zA-Z0-9_])+")
     private String email;
 
     @NotBlank(message = "Pole nie może być puste")
+    @Pattern(regexp = "^[a-zA-ZąęćśźżłóĆŚŹŻŁ ]{2,30}$")
     private String name;
 
     @NotBlank(message = "Pole nie może być puste")
