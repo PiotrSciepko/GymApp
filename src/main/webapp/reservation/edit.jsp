@@ -37,7 +37,7 @@
                         Trener<br/>
                         <form:select path="persons" items="${trainers}" itemLabel="name"/>
                     </label>
-                    <br/><br/>
+                    <br/><br/><br/>
                     <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz</button>
 <%--                    <table>--%>
 <%--                        <tr>--%>
