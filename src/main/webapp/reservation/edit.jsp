@@ -13,16 +13,16 @@
         <a href="/reservation/add" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i>Dodaj zajęcia do grafiku</a>
     </div>
-    <table class="table">
-        <tr style="background-color: white">
-            <td>
+<%--    <table class="table">--%>
+<%--        <tr style="background-color: white">--%>
+<%--            <td>--%>
                 <form:form method="post" modelAttribute="reservation" action="/reservation/update">
                     <form:input type="hidden" path="id"/>
                     <label>
                         Dzień <br/>
                         <form:select path="day" items="${days}"/>
                     </label>
-                  <p>   </p>
+                    <br/><br/>
                     <label>
                         Godzina <br/>
                         <form:select path="hour" items="${hours}"/>
@@ -39,37 +39,37 @@
                     </label>
                     <br/><br/><br/>
                     <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz</button>
-<%--                    <table>--%>
-<%--                        <tr>--%>
-<%--                            <td style="border: none">Dzień tygodnia<br/>--%>
-<%--                                <form:select path="day" items="${days}"/>--%>
-<%--                            </td>--%>
-<%--                            <td style="border: none">--%>
-<%--                                Godzina <br/>--%>
-<%--                                <form:select path="hour" items="${hours}"/>--%>
-<%--                            </td>--%>
-<%--                            <td style="border: none">--%>
-<%--                                Zajęcia <br/>--%>
-<%--                                <form:select path="groupActivity.id" items="${activities}" itemValue="id"--%>
-<%--                                             itemLabel="name"/>--%>
-<%--                                <br/> <br/>--%>
-<%--                                Trener <br/>--%>
-<%--                                <form:select path="persons" items="${trainers}" itemLabel="name"/>--%>
-<%--                            </td>--%>
-<%--                        </tr>--%>
-<%--                        <tr>--%>
-<%--                            <td style="border: none">--%>
-<%--                                    &lt;%&ndash;                                <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">&ndash;%&gt;--%>
-<%--                                <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz</button>--%>
-<%--                            </td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
+                    <%--                    <table>--%>
+                    <%--                        <tr>--%>
+                    <%--                            <td style="border: none">Dzień tygodnia<br/>--%>
+                    <%--                                <form:select path="day" items="${days}"/>--%>
+                    <%--                            </td>--%>
+                    <%--                            <td style="border: none">--%>
+                    <%--                                Godzina <br/>--%>
+                    <%--                                <form:select path="hour" items="${hours}"/>--%>
+                    <%--                            </td>--%>
+                    <%--                            <td style="border: none">--%>
+                    <%--                                Zajęcia <br/>--%>
+                    <%--                                <form:select path="groupActivity.id" items="${activities}" itemValue="id"--%>
+                    <%--                                             itemLabel="name"/>--%>
+                    <%--                                <br/> <br/>--%>
+                    <%--                                Trener <br/>--%>
+                    <%--                                <form:select path="persons" items="${trainers}" itemLabel="name"/>--%>
+                    <%--                            </td>--%>
+                    <%--                        </tr>--%>
+                    <%--                        <tr>--%>
+                    <%--                            <td style="border: none">--%>
+                    <%--                                    &lt;%&ndash;                                <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">&ndash;%&gt;--%>
+                    <%--                                <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz</button>--%>
+                    <%--                            </td>--%>
+                    <%--                        </tr>--%>
+                    <%--                    </table>--%>
                     <br/>
 
                 </form:form>
-            </td>
-        </tr>
-    </table>
+<%--            </td>--%>
+<%--        </tr>--%>
+<%--    </table>--%>
     ${error}
 
 </div>
