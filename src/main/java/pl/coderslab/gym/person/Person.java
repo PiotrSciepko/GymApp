@@ -24,7 +24,7 @@ public class Person {
     private String email;
 
     @NotBlank(message = "Pole nie może być puste")
-    @Pattern(regexp = "^[a-zA-ZąęćśźżłóĆŚŹŻŁ ]{2,30}$")
+    @Pattern(regexp = "^[a-zA-ZąęćśźżłóĆŚŹŻŁ ]{2,30}$", message = "Niepoprawna nazwa")
     private String name;
 
     @NotBlank(message = "Pole nie może być puste")
