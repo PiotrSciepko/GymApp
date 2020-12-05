@@ -22,17 +22,14 @@
                         Dzień <br/>
                         <form:select path="day" items="${days}"/>
                     </label>
-                    <br/><br/>
                     <label style="display: inline-block">
                         Godzina <br/>
                         <form:select path="hour" items="${hours}"/>
                     </label>
-                    <br/><br/>
                     <label style="display: inline-block">
                         Zajęcia<br/>
                         <form:select path="groupActivity.id" items="${activities}" itemValue="id" itemLabel="name"/>
                     </label>
-                    <br/><br/>
                     <label style="display: inline-block">
                         Trener<br/>
                         <form:select path="persons" items="${trainers}" itemLabel="name"/>
