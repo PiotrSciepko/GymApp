@@ -9,7 +9,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dodaj zajęcia do grafiku</h1>
-<%--        <a href="/reservation/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i--%>
+        <%--        <a href="/reservation/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i--%>
         <a href="/reservation/add" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i>Dodaj zajęcia do grafiku</a>
     </div>
@@ -30,15 +30,14 @@
                                 Zajęcia <br/>
                                 <form:select path="groupActivity.id" items="${activities}" itemValue="id"
                                              itemLabel="name"/>
-                            </td>
-                            <td style="border: none">
+                                <br/> <br/>
                                 Trener <br/>
                                 <form:select path="persons" items="${trainers}" itemLabel="name"/>
                             </td>
                         </tr>
                         <tr>
                             <td style="border: none">
-<%--                                <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">--%>
+                                    <%--                                <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">--%>
                                 <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">
                                     Zapisz
                                 </button>
