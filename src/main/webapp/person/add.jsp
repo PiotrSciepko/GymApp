@@ -41,7 +41,8 @@
                             <option>trainer</option>
                         </form:select>
                         <br /><br /><br />
-                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz
+<%--                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz--%>
+                    <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz
                     </button>
                 </form:form>
             </td>
