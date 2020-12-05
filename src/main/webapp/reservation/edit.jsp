@@ -18,10 +18,23 @@
             <td>
                 <form:form method="post" modelAttribute="reservation" action="/reservation/update">
                     <form:input type="hidden" path="id"/>
-                    Dzień <form:select path="day" items="${days}"/>
-                    Godzina <form:select path="hour" items="${hours}"/>
-                    Zajecia <form:select path="groupActivity.id" items="${activities}" itemValue="id" itemLabel="name"/>
-                    Trener <form:select path="persons" items="${trainers}" itemLabel="name"/>
+                    <label>
+                        Dzień <br/>
+                        <form:select path="day" items="${days}"/>
+                    </label>
+                    <label>
+                        Godzina <br/>
+                        <form:select path="hour" items="${hours}"/>
+                    </label>
+                    <label>
+                        Zajęcia<br/>
+                        <form:select path="groupActivity.id" items="${activities}" itemValue="id" itemLabel="name"/>
+                    </label>
+                    <label>
+                        Trener<br/>
+                        <form:select path="persons" items="${trainers}" itemLabel="name"/>
+                    </label>
+                    <br/><br/>
                     <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz</button>
 <%--                    <table>--%>
 <%--                        <tr>--%>
