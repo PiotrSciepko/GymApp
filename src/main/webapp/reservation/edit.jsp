@@ -43,7 +43,6 @@
                                 </button>
                             </td>
                         </tr>
-                        </tr>
                     </table>
                     <br/>
 

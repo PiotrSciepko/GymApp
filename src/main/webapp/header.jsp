@@ -24,7 +24,7 @@
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 </head>
-<body style="max-width:1300px; min-width: 600px;margin: 0px auto;
+<body style="max-width:1300px; min-width: 600px;margin: 0 auto;
 background-image: url('/img/gym1.jpg'); background-attachment: fixed;
         /*url('http://www.bialystokonline.pl/gfx_prezentacje/kat/11215/6806_11215.jpg'); background-attachment: fixed;*/
          background-size: cover; background-repeat: no-repeat">
@@ -77,7 +77,7 @@ background-image: url('/img/gym1.jpg'); background-attachment: fixed;
         <hr class="sidebar-divider d-none d-md-block">
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <p class="nav-link collapsed" style="padding-bottom:0px; padding-top: 0px">
+            <p class="nav-link collapsed" style="padding-bottom:0; padding-top: 0">
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Ustawienia:</span>
             </p>

@@ -42,7 +42,6 @@
                                 </button>
                             </td>
                         </tr>
-                        </tr>
                     </table>
                     <br/>
                 </form:form>
