@@ -103,7 +103,7 @@ background-image: url('/img/gym1.jpg'); background-attachment: fixed;
     <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
-        <div id="content" style="min-width: 600px">
+        <div id="content">
 
             <%--            <!-- Topbar -->--%>
             <%--            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">--%>
