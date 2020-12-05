@@ -22,7 +22,7 @@
                         Dzień <br/>
                         <form:select path="day" items="${days}"/>
                     </label>
-                    <br/><br/>
+                  <p>   </p>
                     <label>
                         Godzina <br/>
                         <form:select path="hour" items="${hours}"/>
