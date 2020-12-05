@@ -18,22 +18,22 @@
 <%--            <td>--%>
                 <form:form method="post" modelAttribute="reservation" action="/reservation/update">
                     <form:input type="hidden" path="id"/>
-                    <label>
+                    <label style="display: inline-block">
                         Dzień <br/>
                         <form:select path="day" items="${days}"/>
                     </label>
                     <br/><br/>
-                    <label>
+                    <label style="display: inline-block">
                         Godzina <br/>
                         <form:select path="hour" items="${hours}"/>
                     </label>
                     <br/><br/>
-                    <label>
+                    <label style="display: inline-block">
                         Zajęcia<br/>
                         <form:select path="groupActivity.id" items="${activities}" itemValue="id" itemLabel="name"/>
                     </label>
                     <br/><br/>
-                    <label>
+                    <label style="display: inline-block">
                         Trener<br/>
                         <form:select path="persons" items="${trainers}" itemLabel="name"/>
                     </label>
