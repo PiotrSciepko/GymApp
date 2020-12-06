@@ -86,7 +86,7 @@ public class ReservationController {
     public Collection<String> hours() {
         List<String> hours = new ArrayList<>();
         for (int i = 6; i < 22; i++) {
-            hours.add(String.valueOf(i));
+            hours.add(String.valueOf(i) + ":00");
         }
         return hours;
     }
