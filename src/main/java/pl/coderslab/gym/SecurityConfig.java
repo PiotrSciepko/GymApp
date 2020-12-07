@@ -12,7 +12,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/**/add", "/**/update", "/**/delete", "/**/show").hasRole("user")
+                .antMatchers("/**/add/**", "/**/update/**", "/**/delete/**", "/**/show/**").hasRole("user")
                 .and().formLogin();
     }
 }
