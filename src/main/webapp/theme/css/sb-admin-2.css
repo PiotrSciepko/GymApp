@@ -1516,7 +1516,9 @@ pre code {
 }
 
 .table {
+  /*mySetting*/
   width: 100%;
+
   margin-bottom: 1rem;
   color: #858796;
 }
@@ -6666,8 +6668,8 @@ button.bg-dark:focus {
   .d-sm-flex {
     display: flex !important;
 
-    /*My padding*/
-    padding-top: 50px;
+    /*mySetting*/
+    padding-top: 25px;
 
   }
   .d-sm-inline-flex {

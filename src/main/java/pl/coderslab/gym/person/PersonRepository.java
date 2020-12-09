@@ -6,4 +6,5 @@ import java.util.List;
 public interface PersonRepository extends JpaRepository<Person, Long> {
     List<Person> findByRole(String role);
     List<Person> findByEmail(String email);
+    List<Person> findAllByOrderById();
 }

@@ -14,7 +14,7 @@ public class LevelService {
     }
 
     public List<Level> getLevels() {
-        return levelRepository.findAll();
+        return levelRepository.findAllByOrderById();
     }
 
     public Level getLevel(long id) {

@@ -16,7 +16,7 @@ public class PersonService {
     }
 
     public List<Person> getPersons() {
-        return personRepository.findAll();
+        return personRepository.findAllByOrderById();
     }
 
     public Person getPerson(long id) {

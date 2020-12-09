@@ -8,9 +8,10 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dodaj użytkownika</h1>
-        <a href="/activity/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Dodaj</a>
+        <h1 class="h3 mb-0 text-gray-800">Dodaj zajęcia</h1>
+<%--        <a href="/activity/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i--%>
+<%--        <a href="/activity/add" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i--%>
+<%--                class="fas fa-download fa-sm text-white-50"></i> Dodaj</a>--%>
     </div>
     <table class="table">
         <tr style="background-color: white">
@@ -29,8 +30,9 @@
                     <form:select path="level.id" items="${levels}" itemValue="id" itemLabel="name"/>
                     <br/> <br/>
 
-                    <br/> <br/> <br/>
-                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz
+                    <br/>
+<%--                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz--%>
+                    <button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit">Zapisz
                     </button>
                 </form:form>
             </td>

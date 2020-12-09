@@ -1,0 +1,1 @@
+web: java -jar target/gym_app_sb-0.0.1-SNAPSHOT.jar
